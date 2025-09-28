@@ -1,3 +1,7 @@
 document.getElementById("clickMe").addEventListener("click", () => {
-  alert("Hello from your UI!");
+  alert("You clicked the first button!");
+});
+
+document.getElementById("helloBtn").addEventListener("click", () => {
+  alert("Hello from the Galaxy UI!");
 });
