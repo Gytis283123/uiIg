@@ -1,32 +1,30 @@
-ChatGPT said:
-
-Perfect! Let’s make your UI look colorful like a galaxy 🌌. We can do this entirely with CSS gradients and animations—no images needed. I’ll give you a ready-to-use setup.
-
-1️⃣ Update your style.css
-/* Set the whole page to a moving galaxy gradient */
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+html, body {
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
   color: #ffffff;
-  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #ff0080);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
 }
 
-/* Animate the gradient like a moving galaxy */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+canvas#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
 }
 
-/* Buttons */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 20vh;
+}
+
 button {
   padding: 12px 25px;
   font-size: 18px;
